@@ -2,6 +2,9 @@ ExpressionReflection
 =====
 簡易的使用Expression取得指定類別的MemberInfo
 
+### 許可證
+本專案使用MIT許可證
+
 ### 範例
 ```csharp
 //取得Count屬性MemberInfo
