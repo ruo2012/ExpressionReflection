@@ -19,6 +19,15 @@ namespace ExpressionReflection.Test {
                 typeof(List<int>).GetMember<List<int>>(x => x.Clear()));
             Assert.IsNotNull(
                 typeof(List<int>).GetMember<List<int>>(x => x.Sum()));
+
+            Assert.IsNotNull(
+                test.GetMember(x => x.Count));
+            Assert.IsNotNull(
+                test.GetMember(x => new List<int>()));
+            Assert.IsNotNull(
+                test.GetMember<List<int>>(x => x.Clear()));
+            Assert.IsNotNull(
+                test.GetMember<List<int>>(x => x.Sum()));
         }
     }
 }
