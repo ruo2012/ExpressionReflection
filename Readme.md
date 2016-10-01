@@ -1,4 +1,4 @@
-﻿ExpressionReflection
+ExpressionReflection
 =====
 簡易的使用Expression取得指定類別的MemberInfo
 
@@ -12,6 +12,8 @@ Install-Package SimpleExpressionReflection
 
 ### 範例
 ```csharp
+using ExpressionReflection;
+
 //取得Count屬性MemberInfo
 typeof(List<int>)
     .GetMember<List<int>>(x => x.Count);
