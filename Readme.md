@@ -1,25 +1,30 @@
-ExpressionReflection
+ï»¿ExpressionReflection
 =====
-Â²©öªº¨Ï¥ÎExpression¨ú±o«ü©wÃş§OªºMemberInfo
+ç°¡æ˜“çš„ä½¿ç”¨Expressionå–å¾—æŒ‡å®šé¡åˆ¥çš„MemberInfo
 
-### ³\¥iÃÒ
-¥»±M®×¨Ï¥ÎMIT³\¥iÃÒ
+### è¨±å¯è­‰
+æœ¬å°ˆæ¡ˆä½¿ç”¨MITè¨±å¯è­‰
 
-### ½d¨Ò
+### [Nuget](https://www.nuget.org/packages/SimpleExpressionReflection/1.0.0)
+```
+Install-Package SimpleExpressionReflection
+```
+
+### ç¯„ä¾‹
 ```csharp
-//¨ú±oCountÄİ©ÊMemberInfo
+//å–å¾—Countå±¬æ€§MemberInfo
 typeof(List<int>)
     .GetMember<List<int>>(x => x.Count);
 
-//¨ú±oList<int>«Øºc¤lMemberInfo
+//å–å¾—List<int>å»ºæ§‹å­MemberInfo
 typeof(List<int>)
     .GetMember(x => new List<int>());
 
-//¨ú±oClear¤èªkMemberInfo
+//å–å¾—Clearæ–¹æ³•MemberInfo
 typeof(List<int>)
     .GetMember<List<int>>(x => x.Clear())
 
-//¨ú±oSum¤èªkMemberInfo
+//å–å¾—Sumæ–¹æ³•MemberInfo
 typeof(List<int>)
     .GetMember<List<int>>(x => x.Sum())
 
