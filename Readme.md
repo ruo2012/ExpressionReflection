@@ -1,35 +1,35 @@
-ExpressionReflection
+﻿ExpressionReflection
 =====
-簡易的使用Expression取得指定類別的MemberInfo
+Simple way to use Expression to Reflection.
+This project use `Lambda Expression` simplify GetMember method.
 
-### 許可證
-本專案使用MIT許可證
+### License
+Thise project use **MIT License** (see `License.txt`)
 
 ### [Nuget](https://www.nuget.org/packages/SimpleExpressionReflection/1.0.0)
 ```
 Install-Package SimpleExpressionReflection
 ```
 
-### 範例
+### Get Started
 ```csharp
-using ExpressionReflection;
-
-//取得Count屬性MemberInfo
+//get `Count` property's MemberInfo
 typeof(List<int>)
     .GetMember<List<int>>(x => x.Count);
 
-//取得List<int>建構子MemberInfo
+//get List<int> constructor
 typeof(List<int>)
     .GetMember(x => new List<int>());
 
-//取得Clear方法MemberInfo
+//get Clear method's MemberInfo(not return value method)
 typeof(List<int>)
-    .GetMember<List<int>>(x => x.Clear())
+    .GetMember<List<int>>(x => x.Clear());
 
-//取得Sum方法MemberInfo
+//get Sum method's MemberInfo(has return value method)
 typeof(List<int>)
-    .GetMember<List<int>>(x => x.Sum())
+    .GetMember<List<int>>(x => x.Sum());
 
+//other way
 List<int> test = new List<int>();
 test.GetMember(x => x.Count);
 test.GetMember(x => new List<int>());
