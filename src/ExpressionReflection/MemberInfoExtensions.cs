@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 
 namespace ExpressionReflection {
-    public static class Type_GetMemberExtensions {
+    public static class MemberInfoExtensions {
         static MemberInfo GetMember(Expression expression) {
             if (expression is MethodCallExpression) {
                 return (expression as MethodCallExpression)?.Method;
