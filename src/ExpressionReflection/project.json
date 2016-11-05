@@ -1,5 +1,6 @@
 {
   "title": "SimpleExpressionReflection",
+  "description": "Simple way to use Expression to Reflection. This project use Lambda Expression simplify GetMember method.",
   "version": "1.0.0",
   "authors": [ "PeiYao Xu" ],
   "copyright": "MIT",
